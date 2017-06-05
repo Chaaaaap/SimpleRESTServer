@@ -7,6 +7,9 @@ using System.Collections;
 
 namespace SimpleRESTServer.Controllers
 {
+    /// <summary>
+    /// Handles everything about users.
+    /// </summary>
     public class UserController : ApiController
     {
         /// <summary>
@@ -54,6 +57,12 @@ namespace SimpleRESTServer.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Updates a user.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="value"></param>
+        /// <returns></returns>
         // PUT: api/User/5
         public HttpResponseMessage Put(int id, [FromBody]User value)
         {
@@ -72,6 +81,11 @@ namespace SimpleRESTServer.Controllers
             return response;
         }
 
+        /// <summary>
+        /// Deletes a user.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // DELETE: api/User/5
         public HttpResponseMessage Delete(int id)
         {
