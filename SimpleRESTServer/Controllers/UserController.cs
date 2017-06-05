@@ -9,6 +9,10 @@ namespace SimpleRESTServer.Controllers
 {
     public class UserController : ApiController
     {
+        /// <summary>
+        /// Get all users.
+        /// </summary>
+        /// <returns></returns>
         // GET: api/User
         public ArrayList Get()
         {
@@ -17,6 +21,11 @@ namespace SimpleRESTServer.Controllers
             return up.getUsers();
         }
 
+        /// <summary>
+        /// Get specific user by id.
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         // GET: api/User/5
         public User Get(int id)
         {
@@ -27,6 +36,11 @@ namespace SimpleRESTServer.Controllers
             return user;
         }
 
+        /// <summary>
+        /// Create a new user.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         // POST: api/User
         public HttpResponseMessage Post([FromBody]User value)
         {
