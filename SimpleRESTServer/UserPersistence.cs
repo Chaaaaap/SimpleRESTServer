@@ -11,8 +11,6 @@ namespace SimpleRESTServer
     public class UserPersistence
     {
 
-
-
         public long saveUser(User userToSave)
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
@@ -103,8 +101,6 @@ namespace SimpleRESTServer
                 conn = new MySql.Data.MySqlClient.MySqlConnection();
                 conn.ConnectionString = myConnectionString;
                 conn.Open();
-
-
 
                 ArrayList userList = new ArrayList();
 
