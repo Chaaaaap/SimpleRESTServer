@@ -35,6 +35,10 @@ namespace SimpleRESTServer.Controllers
             UserPersistence up = new UserPersistence();
 
             User user = up.getUser(id);
+            if(user == null)
+            {
+                throw new HttpResponseException(new HttpResponseMessage(HttpStatusCode.NotFound));
+            }
 
             return user;
         }
