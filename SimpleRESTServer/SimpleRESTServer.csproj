@@ -217,6 +217,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="DBConnections.config" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

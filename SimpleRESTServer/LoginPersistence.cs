@@ -1,6 +1,7 @@
 ﻿using SimpleRESTServer.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 
@@ -8,7 +9,7 @@ namespace SimpleRESTServer
 {
     public class LoginPersistence
     {
-        string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+        string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
         public User Login(string username, string password)
         {

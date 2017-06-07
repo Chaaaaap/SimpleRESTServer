@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using MySql.Data;
 using System.Collections;
+using System.Configuration;
 
 namespace SimpleRESTServer
 {
@@ -14,7 +15,7 @@ namespace SimpleRESTServer
         public long saveUser(User userToSave)
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
-            string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+            string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
             try
             {
@@ -48,7 +49,7 @@ namespace SimpleRESTServer
         public User getUser(int id)
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
-            string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+            string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
             try
             {
@@ -94,7 +95,7 @@ namespace SimpleRESTServer
         public ArrayList getUsers()
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
-            string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+            string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
             try
             {
@@ -137,7 +138,7 @@ namespace SimpleRESTServer
         public bool deleteUser(int id)
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
-            string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+            string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
             try
             {
@@ -181,7 +182,7 @@ namespace SimpleRESTServer
         public bool updateUser(int id, User user)
         {
             MySql.Data.MySqlClient.MySqlConnection conn = null;
-            string myConnectionString = "server=databasetest.cgredk49egoe.eu-central-1.rds.amazonaws.com;uid=Mikkel;pwd=aln1poin;database=LalaDB";
+            string myConnectionString = ConfigurationManager.ConnectionStrings["AWS"].ConnectionString;
 
             try
             {
