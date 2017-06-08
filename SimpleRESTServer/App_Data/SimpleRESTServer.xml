@@ -481,7 +481,7 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
-        <member name="M:SimpleRESTServer.Controllers.LoginController.Post(System.String,System.String)">
+        <member name="M:SimpleRESTServer.Controllers.LoginController.Post(SimpleRESTServer.Models.Login)">
             <summary>
             Used by visitors to login.
             </summary>
