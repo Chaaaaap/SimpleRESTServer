@@ -36,10 +36,18 @@ namespace SimpleRESTServer
                     user.FirstName = mySQLReader.GetString(3);
                     user.LastName = mySQLReader.GetString(4);
                     user.Token = mySQLReader.GetString(5);
+                    mySQLReader.Close();
+
+                    
                 }
 
                 if(user.Password.Equals(password) && user.UserName.Equals(username))
                 {
+                    DateTime latestLoginDate = DateTime.Today;
+                    DateTime latestLoginTime = DateTime.Now.AddHours(2);
+                    sqlString = "UPDATE users SET latestlogin='" + latestLoginDate.ToString("yyyy-MM-dd") +" " + latestLoginTime.ToString("HH:mm:ss") + "' WHERE id=" + user.Id;
+                    cmd = new MySql.Data.MySqlClient.MySqlCommand(sqlString, conn);
+                    cmd.ExecuteNonQuery();
                     return user;
                 } else
                 {
