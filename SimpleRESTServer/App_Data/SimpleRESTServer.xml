@@ -481,12 +481,37 @@
             </summary>
             <param name="documentPath">The physical path to XML document.</param>
         </member>
+        <member name="M:SimpleRESTServer.Controllers.LoginController.Get">
+            <summary>
+            Not used
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SimpleRESTServer.Controllers.LoginController.Get(System.Int32)">
+            <summary>
+            Not used
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
         <member name="M:SimpleRESTServer.Controllers.LoginController.Post(SimpleRESTServer.Models.Login)">
             <summary>
             Used by visitors to login.
             </summary>
-            <param name="username"></param>
-            <param name="password"></param>
+            <param name="login"></param>
+        </member>
+        <member name="M:SimpleRESTServer.Controllers.LoginController.Put(System.Int32,System.String)">
+            <summary>
+            Not used
+            </summary>
+            <param name="id"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:SimpleRESTServer.Controllers.LoginController.Delete(System.Int32)">
+            <summary>
+            Not used
+            </summary>
+            <param name="id"></param>
         </member>
         <member name="T:SimpleRESTServer.Controllers.UserController">
             <summary>
