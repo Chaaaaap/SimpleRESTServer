@@ -9,6 +9,9 @@ using System.Configuration;
 
 namespace SimpleRESTServer
 {
+    /// <summary>
+    /// Used for persistency when working with users.
+    /// </summary>
     public class UserPersistence
     {
 
@@ -23,10 +26,11 @@ namespace SimpleRESTServer
                 conn.ConnectionString = myConnectionString;
                 conn.Open();
 
+                DateTime createdDate = DateTime.Today;
+                DateTime createdTime = DateTime.Now.AddHours(2);
 
-
-                string sqlString = "INSERT INTO users (username, password, firstname, lastname, token) VALUES" +
-                    "('" + userToSave.UserName + "','" + userToSave.Password + "','" + userToSave.FirstName + "','" + userToSave.LastName + "','" + userToSave.Token + "')";
+                string sqlString = "INSERT INTO users (username, password, firstname, lastname, token, created) VALUES" +
+                    "('" + userToSave.UserName + "','" + userToSave.Password + "','" + userToSave.FirstName + "','" + userToSave.LastName + "','" + userToSave.Token + "','" + createdDate.ToString("yyyy-MM-dd") + " " + createdTime.ToString("hh:mm:ss") + "')";
 
                 MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(sqlString, conn);
                 cmd.ExecuteNonQuery();
